@@ -21,6 +21,27 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script>
+		function submitForm(event) {
+			event.preventDefault(); // Prevent the form from submitting via normal POST request
+			const form = document.querySelector('form');
+			const formData = new FormData(form);
+			const url = 'https://forms.gle/C33ogcBEhHurLiE2A';
+
+			fetch(url, {
+				method: 'POST',
+				body: formData,
+			})
+			.then(response => {
+				// Handle the response as needed
+				console.log('Form submitted successfully!');
+			})
+			.catch(error => {
+				// Handle any errors
+				console.error('Form submission error:', error);
+			});
+			}
+	</script>
 	</head>
 	<body>
 	<div class="fh5co-loader"></div>
@@ -68,9 +89,9 @@
 				</div>
 				<div class="col-md-8">
 					<h2>Hello Namaste!</h2>
-					<p>This is Bhanuprakash. I am a flutter app developer. With a passion of creating a optimized apps for both android and ios using Dart language. I am currently pursuing my B.Tech. Through my educational journey, I have gained valuable knowledge and practical experiecen that has equipped me with the skills needed to excel in my profession.</p>
-					<p>Not only as a passionate app developer, I am very much intrested in almost everything which helps me to gain new knowledge everyday. I am a self-motivated individual with a strong work ethic and a drive to achieve excellence in everything I do. I always belive in continous learning and personal growth, always seeking opportunities to expand my knowledge and skills.</p>
-					<p>Outside of this, I enjoy doing photography, This is the one which accepts me as me. I always love to capture the people's smile with just one click from my finger which can't be alterd later by any cost. This allows me to be refreshed and active and always gives me some motivaion to keep wowking.</p>
+					<p>This is Bhanuprakash. I am a flutter app developer. With a passion of creating a optimized apps for both android and iOS using Dart language. I am currently pursuing my B.Tech. Through my educational journey, I have gained valuable knowledge and practical experience that has equipped me with the skills needed to excel in my profession.</p>
+					<p>Not only as a passionate app developer, I am very much interested in almost everything which helps me to gain new knowledge everyday. I am a self-motivated individual with a strong work ethic and a drive to achieve excellence in everything I do. I always believe in continuous learning and personal growth, always seeking opportunities to expand my knowledge and skills.</p>
+					<p>Outside of this, I enjoy doing photography, This is the one which accepts me as me. I always love to capture the people's smile with just one click from my finger which can't be altered later by any cost. This allows me to be refreshed and active and always gives me some motivation to keep working.</p>
 					<p>
 						<ul class="fh5co-social-icons">
 							<li><a href="https://twitter.com/eenadula" target="_blank"><i class="icon-twitter2"></i></a></li>
@@ -105,7 +126,7 @@
 									<span class="company">IIIT Kottayam - 2020 - 2024</span>
 								</div>
 								<div class="timeline-body">
-									<p>Indian Instistute of Information Technology, Kottayam is a place of excellence Where students learn and innovate With faculty who inspire and motivate And a campus that is serene and beautiful.</p>
+									<p>Indian Institute of Information Technology, Kottayam is a place of excellence Where students learn and innovate With faculty who inspire and motivate And a campus that is serene and beautiful.</p>
 								</div>
 							</div>
 						</li>
@@ -309,7 +330,7 @@
 				<div class="col-md-3 text-center col-padding animate-box">
 					<a href="https://github.com/Bhanuprakash9973/HandGestureCursor" target="_blank" class="work" style="background-image: url(images-1/ai\ mouse\ 1.jpg);">
 						<div class="desc">
-							<h3>Hand Geseture Mouse</h3>
+							<h3>Hand Gesture Mouse</h3>
 							<span>Using Python</span>
 						</div>
 					</a>
@@ -317,7 +338,7 @@
 				<div class="col-md-3 text-center col-padding animate-box">
 					<a href="https://github.com/Bhanuprakash9973/Leo-Virtual-Assistant" target="_blank" class="work" style="background-image: url(images-1/leo\ VA.jpg);">
 						<div class="desc">
-							<h3>Leo, Virtual Assitant</h3>
+							<h3>Leo, Virtual Assistant</h3>
 							<span>Using Python</span>
 						</div>
 					</a>
@@ -452,33 +473,33 @@
 		</div>
 		<div class="choose animate-box">
 			<h2>Contact</h2>
-			<form action="#">
+			<form action="" method="post" onsubmit="submitForm(event)">
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" id="fname" class="form-control" placeholder="Firstname">
+						<input type="text" id="fname" name= "Firstname" class="form-control" placeholder="Firstname">
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" id="lname" class="form-control" placeholder="Lastname">
+						<input type="text" id="lname" name="Lastname" class="form-control" placeholder="Lastname">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="email" class="form-control" placeholder="Email please..">
+						<input type="text" id="email" name="Email" class="form-control" placeholder="Email please..">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="subject" class="form-control" placeholder="Subject of message 🤔">
+						<input type="text" id="subject" name="Subject" class="form-control" placeholder="Subject of message 🤔">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us 🗣️"></textarea>
+						<textarea name="Message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us 🗣️"></textarea>
 					</div>
 				</div>
 				<div class="form-group">
