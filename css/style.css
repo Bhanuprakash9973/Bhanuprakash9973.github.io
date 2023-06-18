@@ -10,6 +10,7 @@
 * 	Template Style 
 *
 * ======================================================= */
+
 body {
   font-family: "Space Mono", Arial, serif;
   font-weight: 400;
@@ -17,6 +18,29 @@ body {
   line-height: 1.7;
   color: #4d4d4d;
   background: #fff;
+}
+
+/* Hide vertical scrollbar */
+body::-webkit-scrollbar {
+  width: 0.01em;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 0.001em;
+}
+/* Hide horizontal scrollbar */
+body::-webkit-scrollbar-x {
+  height: 0.5em;
+}
+body::-webkit-scrollbar-x-track {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-x-thumb {
+  background-color: #999;
+  border-radius: 0.001em;
 }
 
 #page {
@@ -47,13 +71,13 @@ body {
 }
 
 a {
-  color: #FF9000;
+  color: #00539C;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #FF9000;
+  color: #00539C;
   outline: none;
   text-decoration: none;
 }
@@ -70,18 +94,18 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 ::-webkit-selection {
-  color: #fff;
-  background: #FF9000;
+  color: #EEA47F;
+  background: #00539C;
 }
 
 ::-moz-selection {
-  color: #fff;
-  background: #FF9000;
+  color: #EEA47F;
+  background: #00539C;
 }
 
 ::selection {
-  color: #fff;
-  background: #FF9000;
+  color: #EEA47F;
+  background: #00539C;
 }
 
 #fh5co-header,
@@ -100,7 +124,9 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 144, 0, 0.9);
+  /* background: rgba(255, 144, 0, 0.9); */
+  background: rgba(0, 83, 186, 0.8)
+  /* background: rgba(238, 164, 127, 0.9) */ /*peach */
 }
 #fh5co-header .display-t,
 .fh5co-cover .display-t {
@@ -222,7 +248,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-features {
-  background: #FF9000;
+  background: #00539C;
 }
 #fh5co-features h2 {
   color: #fff;
@@ -257,7 +283,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table-cell;
   vertical-align: middle;
   height: 100px;
-  color: #FF9000 !important;
+  color: #00539C !important;
 }
 #fh5co-features .feature-left .feature-copy {
   width: 100%;
@@ -308,7 +334,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .fh5co-bg-dark {
   background: #2F3C4F;
-  background: #FF9000;
+  background: #00539C;
 }
 .fh5co-bg-dark .fh5co-heading h2 {
   color: #fff !important;
@@ -371,7 +397,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #FF9000;
+  color: #00539C;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -408,7 +434,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 20px;
 }
 #fh5co-about .fh5co-social-icons li a:hover {
-  background: #FF9000;
+  background: #00539C;
 }
 
 .fh5co-heading {
@@ -538,7 +564,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 40px;
   left: 50%;
   margin-left: -21px;
-  background-color: #FF9000;
+  background-color: #00539C;
   z-index: 100;
   display: table;
   -webkit-border-radius: 50%;
@@ -697,6 +723,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   text-align: center;
 }
+
 .chart span {
   position: absolute;
   top: 50%;
@@ -752,7 +779,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .work .desc span {
   display: block;
-  color: #999999;
+  color: #EEA47F;
   font-size: 14px;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
@@ -807,7 +834,7 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 54px;
   border: none !important;
   background: #fff;
-  color: #FF9000;
+  color: #00539C;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
@@ -1117,9 +1144,9 @@ input[type="text"] {
 }
 
 .btn-primary {
-  background: #FF9000;
+  background: #00539C;
   color: #fff;
-  border: 2px solid #FF9000;
+  border: 2px solid #00539C;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #ff9b1a !important;
@@ -1127,11 +1154,11 @@ input[type="text"] {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #FF9000;
-  border: 2px solid #FF9000;
+  color: #00539C;
+  border: 2px solid #00539C;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #FF9000;
+  background: #00539C;
   color: #fff;
 }
 
@@ -1261,7 +1288,7 @@ input[type="text"] {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #FF9000;
+  border-color: #00539C;
 }
 
 .row-pb-md {
